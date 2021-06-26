@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "App8_Pets_com_Foto"
