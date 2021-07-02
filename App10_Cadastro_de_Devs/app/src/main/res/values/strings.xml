@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cadastro de Devs</string>
+    <string name="titulo_lista">Lista de Devs</string>
+    <string name="titulo_cadastro">Cadastro de Devs</string>
+    <string-array name="opcoes_spinner">
+        <item>Júnior</item>
+        <item>Pleno</item>
+        <item>Sênior</item>
+    </string-array>
+</resources>

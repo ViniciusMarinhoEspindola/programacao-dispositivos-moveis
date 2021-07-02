@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CadastroActivity">
+
+    <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:id="@+id/imvFoto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/borda"
+            android:scaleType="centerCrop"
+            android:cropToPadding="true"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:id="@+id/edtNome"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="52dp"
+            app:layout_constraintTop_toBottomOf="@id/imvFoto"
+            android:layout_marginTop="32dp"
+    />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:id="@+id/edtEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNome"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="48dp"
+    />
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edtEmail"
+            app:layout_constraintStart_toStartOf="@id/edtEmail"
+            android:layout_marginTop="24dp"
+            android:id="@+id/rdgStack">
+        <RadioButton android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/rdbFrontEnd"
+                     android:text="Frontend"
+                     android:onClick="OnStackClick"/>
+        <RadioButton android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/rdbBackEnd"
+                     android:text="Backend"
+                     android:onClick="OnStackClick"/>
+        <RadioButton android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/rdbFullStack"
+                     android:text="Fullstack"
+                     android:onClick="OnStackClick"/>
+    </RadioGroup>
+    <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnSenioridade"
+            app:layout_constraintTop_toBottomOf="@id/rdgStack"
+            app:layout_constraintStart_toStartOf="@+id/rdgStack"
+            android:layout_marginTop="24dp"/>
+    <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/swtEmpregado"
+            app:layout_constraintTop_toBottomOf="@id/spnSenioridade"
+            app:layout_constraintStart_toStartOf="@+id/rdgStack"
+            android:text="Empregado atualmente?"
+            android:checked="false"
+            android:layout_marginTop="16dp"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSalvar"
+            android:backgroundTint="#FFC107"
+            android:drawableLeft="@drawable/floppy_disk"
+            android:drawablePadding="8dp"
+            android:text="Salvar"
+            app:layout_constraintTop_toBottomOf="@id/swtEmpregado"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
