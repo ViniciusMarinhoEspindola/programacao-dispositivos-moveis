@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         btnPesquisar.setOnClickListener() {
             if (edtCep.text.toString().isNotEmpty()) {
-                adicionarEndereco(edtCep.text.toString())
+                pesquisarEndereco(edtCep.text.toString())
                 edtCep.text.clear()
 
                 // Apagar a preferência gravada anteriormente
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun adicionarEndereco(cep_busca: String) {
+    fun pesquisarEndereco(cep_busca: String) {
         val retrofitClient = Network.retrofitConfig("https://viacep.com.br/ws/")
         val servico = retrofitClient.create(EnderecoService::class.java)
 
