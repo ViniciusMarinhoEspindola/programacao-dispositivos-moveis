@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <EditText
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Digite seu Cep..."
+            android:ems="10"
+            android:id="@+id/edtCep"
+            app:layout_constraintStart_toStartOf="@id/gdlStart"
+            app:layout_constraintTop_toTopOf="@id/gdlTop"/>
+
+    <ImageButton
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:padding="0dp"
+            android:src="@drawable/loupe"
+            app:layout_constraintEnd_toEndOf="@id/gdlEnd"
+            app:layout_constraintTop_toTopOf="@id/edtCep"
+            app:layout_constraintBottom_toBottomOf="@id/edtCep"
+            android:id="@+id/btnPesquisar"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.05"
+            android:id="@+id/gdlStart"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.95"
+            android:id="@+id/gdlEnd"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.05"
+            android:id="@+id/gdlTop"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.95"
+            android:id="@+id/gdlBottom"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/edtCep"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:text=""
+                      app:layout_constraintTop_toTopOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:padding="10dp"
+                      android:id="@+id/txtCep"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:text=""
+                      app:layout_constraintTop_toBottomOf="@+id/txtCep"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:padding="10dp"
+                      android:id="@+id/txtEndereco"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:text=""
+                      app:layout_constraintTop_toBottomOf="@+id/txtEndereco"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:padding="10dp"
+                      android:id="@+id/txtBairro"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:text=""
+                      app:layout_constraintTop_toBottomOf="@+id/txtBairro"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:padding="10dp"
+                      android:id="@+id/txtCidade"/>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:text=""
+                      app:layout_constraintTop_toBottomOf="@+id/txtCidade"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:padding="10dp"
+                      android:id="@+id/txtUF"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
